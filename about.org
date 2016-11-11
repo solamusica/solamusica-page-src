@@ -18,16 +18,31 @@ contains the Elm-packages according to the specification in
 
 *** Given
 
-=./src/Main.elm=
+ - Main.elm
+ - index.html
+ - style.css
 
 *** Action for Output
 
-***** Compile to HTML in index.html
+***** Compile to js
+:PROPERTIES:
+:ID:       3eb40b22-3834-46fa-8b3a-eb8a1539d337
+:END:
 
 Go to shell!  You can evaluate
 
-#+begin_src shell
-elm make ./src/Main.elm
+#+begin_src shell :results drawer
+elm-make Main.elm --output elm.js
+elm-make Main.elm --output main.html
 #+end_src
 
-Which yields a file index.html if everything works as expected.
+#+RESULTS:
+:RESULTS:
+Success! Compiled 1 module.
+Successfully generated elm.js
+Success! Compiled 1 module.
+Successfully generated main.html
+:END:
+
+Which is expected to yield file elm.js.  The latter shall be included
+in some html-file.
