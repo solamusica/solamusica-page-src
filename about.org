@@ -1,5 +1,38 @@
 
+* Build the Website
+
+*** Given
+
+ - Main.elm
+ - index.html
+ - style.css
+
+*** Action for Output
+
+***** Compile the js
+:PROPERTIES:
+:ID:       3eb40b22-3834-46fa-8b3a-eb8a1539d337
+:END:
+
+Go to shell!
+
+#+begin_src shell :results drawer
+elm make Main.elm --output elm.js
+#+end_src
+
+The process triggered above triggers also the setup of the elm
+environment (see [[id:4a1f53ec-5d73-4472-afe5-8f2d4d539702][Setup Elm environment]]) if necessary.
+
+Sidenote: If the setup has already been done you need not go to shell
+but you can also do a babel evaluation of the code block above.
+
+The compile is expected to yield file =elm.js=.  The latter shall be
+included in some html-file.
+
 * Setup Elm environment
+:PROPERTIES:
+:ID:       4a1f53ec-5d73-4472-afe5-8f2d4d539702
+:END:
 
 Basis is file =elm-package.json=.  It contains information about
 dependencies within the Elm universe which is all about Elm packages.
@@ -13,33 +46,3 @@ This command might actually download some.
 If there are no errors expect to have a directory =elm-stuff= which
 contains the Elm-packages according to the specification in
 =elm-package.json=.
-
-* Build the Website
-
-*** Given
-
- - Main.elm
- - index.html
- - style.css
-
-*** Action for Output
-
-***** Compile to js
-:PROPERTIES:
-:ID:       3eb40b22-3834-46fa-8b3a-eb8a1539d337
-:END:
-
-Go to shell!  You can evaluate
-
-#+begin_src shell :results drawer
-elm-make Main.elm --output elm.js
-#+end_src
-
-#+RESULTS:
-:RESULTS:
-Success! Compiled 1 module.
-Successfully generated elm.js
-:END:
-
-Which is expected to yield file elm.js.  The latter shall be included
-in some html-file.
