@@ -33,15 +33,12 @@ Go to shell!  You can evaluate
 
 #+begin_src shell :results drawer
 elm-make Main.elm --output elm.js
-elm-make Main.elm --output main.html
 #+end_src
 
 #+RESULTS:
 :RESULTS:
 Success! Compiled 1 module.
 Successfully generated elm.js
-Success! Compiled 1 module.
-Successfully generated main.html
 :END:
 
 Which is expected to yield file elm.js.  The latter shall be included
