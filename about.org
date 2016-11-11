@@ -1,0 +1,33 @@
+
+* Setup Elm environment
+
+Basis is file =elm-package.json=.  It contains information about
+dependencies within the Elm universe which is all about Elm packages.
+
+#+begin_src shell
+elm package install
+#+end_src
+
+This command might actually download some.
+
+If there are no errors expect to have a directory =elm-stuff= which
+contains the Elm-packages according to the specification in
+=elm-package.json=.
+
+* Build the Website
+
+*** Given
+
+=./src/Main.elm=
+
+*** Action for Output
+
+***** Compile to HTML in index.html
+
+Go to shell!  You can evaluate
+
+#+begin_src shell
+elm make ./src/Main.elm
+#+end_src
+
+Which yields a file index.html if everything works as expected.
