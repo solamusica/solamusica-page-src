@@ -1,0 +1,28 @@
+body {
+    background-color: #ffc;
+}
+
+div.centered {
+    border-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 22em;
+    height:22em;
+}
+
+div.centered div {
+    background-color: #ffe;
+    margin: 0;
+    top: auto;
+    border-width: 3;
+    border-style: groove;
+    border-color:  #ffe;
+}
+
+.input {
+    color: orange;
+}
+
+.output {
+    color: green;
+}
